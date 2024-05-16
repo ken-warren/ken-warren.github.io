@@ -1,15 +1,25 @@
-/*===== MENU SHOW =====*/ 
-const showMenu = (toggleId, navId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+/*===== SHOW MENU =====*/
+const navMenu = document.getElementById('nav-menu')
+const navToggle = document.getElementById('nav-toggle')
+const navClose = document.getElementById('nav-close')
 
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
-    }
+
+/*---MENU SHOW---*/
+/*Validate if constant exists*/
+if(navToggle){
+    navToggle.addEventListener('click', () =>{
+        navMen.classList.add('show-menu')
+    })
 }
-showMenu('nav-toggle','nav-menu')
+
+
+/*---MENU HIDDEN---*/
+/*Validate if constant exists*/
+if(navClose){
+    navClose.addEventListener('click', () =>{
+        navMenu.classList.add('show-menu')
+    })
+}
 
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
@@ -20,6 +30,17 @@ function linkAction(){
     navMenu.classList.remove('show')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+/*==================== ADD BLUR HEADER ====================*/
+const blurHeader = () =>{
+    const header = document.getElementById('header')
+    // When the scroll is greater than 50 viewpoint height, add the blur-header class to the header tag
+    this.scrollY >= 50 ? header.classList.add('blur-header')
+                        : header.classList.remove('blur-header')
+}
+window.addEventListener('scroll', blurHeader)
+
+/*==================== EMAIL JS ====================*/
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')

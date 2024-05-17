@@ -51,7 +51,7 @@ const sendEmail = (e) =>{
     emailjs.sendForm('service_9ombexc', 'template_bwbd8t8', '#contact-form', 'EfgvsnSpW5d7hHzUIy')
         .then(() =>{
             //show message that's been sent
-            contactMessage.textContent = 'Message Sent Successfully '
+            contactMessage.textContent = 'Message Sent Successfully✔️ '
 
             //Set message timeout after 5secs
             setTimeout(() =>{
@@ -62,7 +62,7 @@ const sendEmail = (e) =>{
             contactForm.reset()
         }, () =>{
             //show error message
-            contactMessage.textContent = 'Message not sent (service error)'
+            contactMessage.textContent = 'Message not sent (service error)❌'
         })
 }
 

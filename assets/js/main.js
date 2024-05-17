@@ -1,7 +1,7 @@
 /*===== SHOW MENU =====*/
-const navMenu = document.getElementById('nav-menu')
-const navToggle = document.getElementById('nav-toggle')
-const navClose = document.getElementById('nav-close')
+const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close')
 
 
 /*---MENU SHOW---*/
@@ -41,6 +41,25 @@ const blurHeader = () =>{
 window.addEventListener('scroll', blurHeader)
 
 /*==================== EMAIL JS ====================*/
+const contactForm = document.getElementById('contact-form'),
+      contactMessage = document.getElementById('contact-message')
+
+const sendEmail = (e) =>{
+    e.preventDefault()
+
+    //serviceID - templateID - #form - piblickey
+    emailjs.sendForm('serviceID', 'templateID', '#contact-form', 'publickey')
+        .then(() =>{
+            //show message that's been sent
+            contactMessage.textContent = 'Message Sent Successfully'
+        }, () =>{
+            //show error message
+            contactMessage.textContent = 'Message not sent (service error)'
+        })
+}
+
+contactForm.addEventListener('submit', sendEmail)
+
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')

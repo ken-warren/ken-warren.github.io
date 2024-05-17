@@ -68,6 +68,7 @@ const sendEmail = (e) =>{
 
 contactForm.addEventListener('submit', sendEmail)
 
+
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
     origin: 'top',
@@ -89,3 +90,24 @@ const scrollup = () =>{
                                             : scrollup.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollup)
+
+/*=============== SCROLL SECTIONS ZCTIVE LINK ===============*/
+const sections = document.getElementById('section[id]')
+
+const scrollActive = () =>{
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight,
+                sectionTop = current.offsetTop - 58,
+                sectionId = current.getAttribute('id'),
+                sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            sectionsClass.classList.add('active-link')
+        } else{
+            sectionsClass.classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)

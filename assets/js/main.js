@@ -91,7 +91,7 @@ const scrollup = () =>{
 }
 window.addEventListener('scroll', scrollup)
 
-/*=============== SCROLL SECTIONS ZCTIVE LINK ===============*/
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.getElementById('section[id]')
 
 const scrollActive = () =>{

@@ -413,7 +413,7 @@ svg {
 
 .services__icon{
   display: block;
-  font-size: 4.5rem;
+  font-size: 4rem;
   color: var(--first-color);
   margin-bottom: .75rem;
 }

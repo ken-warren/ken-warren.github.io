@@ -8,7 +8,7 @@ const navMenu = document.getElementById('nav-menu'),
 /*Validate if constant exists*/
 if(navToggle){
     navToggle.addEventListener('click', () =>{
-        navMen.classList.add('show-menu')
+        navMenu.classList.add('show-menu')
     })
 }
 
@@ -17,7 +17,7 @@ if(navToggle){
 /*Validate if constant exists*/
 if(navClose){
     navClose.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
+        navMenu.classList.remove('show-menu')
     })
 }
 

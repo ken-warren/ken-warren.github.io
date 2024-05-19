@@ -48,7 +48,7 @@ const sendEmail = (e) =>{
     e.preventDefault()
 
     //serviceID - templateID - #form - piblickey
-    emailjs.sendForm('service_9ombexc', 'template_bwbd8t8', '#contact-form', 'EfgvsnSpW5d7hHzUIy')
+    emailjs.sendForm('service_9ombexc', 'template_bwbd8t8', '#contact-form', 'EfgvsnSpW5d7hHzUI')
         .then(() =>{
             //show message that's been sent
             contactMessage.textContent = 'Message Sent Successfully✔️ '

@@ -1,4 +1,4 @@
-use up/*=============== GOOGLE FONTS ===============*/
+/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
@@ -253,20 +253,19 @@ svg {
   color: var(--first-color);
 }
 
-
 /*=============== HOME ===============*/
 .home{
   background-color: var(--container-color);
 }
 
 .home__container{
-  padding-top: 2rem;
-  row-gap: 2.5rem;
+  padding-top: .1rem;
+  row-gap: 1.5rem;
 }
 
 .home__content{
   display: grid;
-  row-gap: 2rem;
+  row-gap: 1.5rem;
 }
 
 .home__data{
@@ -287,11 +286,13 @@ svg {
 .home__title{
   font-size: var(--biggest-font-size);
   font-weight: var(--font-semi-bold);
+  row-gap: .2rem;
 }
 
 .home__description{
-  font-size: var(--font-semi-bold);
-  margin-block:1rem 1.5rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-block:.5rem 1rem;
 }
 
 .home__social{
@@ -301,15 +302,11 @@ svg {
 }
 
 .home__social-link{
-  display: flex;
   background-color: var(--first-color-alt);
+  display: flex;
   padding: .5rem;
   color: var(--title-color);
-<<<<<<< HEAD
-  clip-path: circle();
-=======
   clip-path: circle ();
->>>>>>> 8560bd657d727fa3a6fb9594c109c975281f4ee0
   transition: transform .4s;
 }
 
@@ -318,10 +315,25 @@ svg {
 }
 
 .home__blob{
-  width: 360px;
+  width: 320px;
   fill: var(--first-color);
   filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, .2));
 }
+
+/*=============== Resize Icons ===============*/
+.ri-github-fill,
+.ri-twitter-line,
+.ri-linkedin-box-fill,
+.ri-line-chart-fill,
+.ri-survey-fill,
+.ri-customer-service-2-fill,
+.ri-instagram-line,
+.ri-facebook-line{
+  font-size: 32px;
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
 
 /*=============== BUTTON ===============*/
 .button{
@@ -417,9 +429,8 @@ svg {
 
 .services__icon{
   display: block;
-  font-size: 7rem;
   color: var(--first-color);
-  margin-bottom: .75rem;
+  margin-bottom: .5rem;
 }
 
 .services__title{
@@ -478,7 +489,7 @@ svg {
   margin-bottom: .25rem;
 }
 
-. projects__title{
+.projects__title{
   font-size: var(--h2-font-size);
   margin-bottom: .75rem;
 }
@@ -675,6 +686,7 @@ svg {
   .home__container,
   .about__container,
   .skills__container{
+    display: flex;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
@@ -706,13 +718,14 @@ svg {
 }
 
 /* For large devices */
-@media scree and (width: 1023px){
+@media screen and (min-width: 1023px){
   .section{
     padding-bottom: 7rem 2rem;
   }
 
   .section__subtitle{
     font-size: var(--normal-font-size);
+    text-align: left;
   }
 
   .nav{
@@ -761,6 +774,7 @@ svg {
   }
 
   .about__container{
+    display: flex;
     grid-template-columns: 550px 460px;
     column-gap: 4.5rem;
     padding-bottom: 1rem;
@@ -778,7 +792,7 @@ svg {
     padding-bottom: 4rem;
   }
   .skills__content{
-    column-gap: 8rem;
+    column-gap: 20rem;
   }
   .skills__group{
     row-gap: 1.5rem;

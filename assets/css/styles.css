@@ -365,6 +365,8 @@ svg {
 
 .about__image{
   justify-self: center;
+  max-width: 100%;
+  height: auto;
 }
 
 .about__blob path{
@@ -750,6 +752,10 @@ svg {
   }
 }
 
+.about__blob{
+  width: 2000px;
+}
+
 @media screen and (min-width: 1152px){
   .container{
     margin-inline: auto;
@@ -779,9 +785,11 @@ svg {
     column-gap: 4.5rem;
     padding-bottom: 1rem;
   }
+
   .about__blob{
-    width: 550px;
+    width: 2400px;
   }
+  
   .about__description{
     margin-bottom: 3rem;
   }

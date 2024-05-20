@@ -316,8 +316,9 @@ svg {
 
 .home__blob{
   width: 320px;
-  fill: var(--first-color);
+  stroke: var(--first-color-alt);
   filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, .2));
+  fill: var(--container-color);
 }
 
 /*=============== Resize Icons ===============*/

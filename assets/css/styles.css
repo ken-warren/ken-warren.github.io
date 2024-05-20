@@ -493,7 +493,7 @@ svg {
   margin-bottom: .25rem;
 }
 
-.projects__title{
+.projects__title span{
   font-size: var(--h2-font-size);
   margin-bottom: .75rem;
 }
@@ -513,6 +513,28 @@ svg {
   bottom: 0;
 }
 
+/*=============== CERTS ===============*/
+.cert__container{
+  background-color: var(--container-color);
+  row-gap: 2rem;
+  justify-content: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.cert__title{
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+  font-size: var(--h2-font-size);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.cert__img{
+  border-radius: 1rem;
+  display: flex;
+  transition: bottom .4s;
+}
 
 /*=============== CONTACT ===============*/
 .contact__container{
@@ -675,11 +697,13 @@ svg {
   .skills__container,
   .services__container,
   .projects__container,
+  .cert__container
   .contact__container{
     grid-template-columns: 360px;
     justify-content: center;
   }
 }
+
 
 
 @media screen and (min-width: 768px){
@@ -716,7 +740,8 @@ svg {
   }
 
   .services__container,
-  .projects__container{
+  .projects__container,
+  .cert__container{
     grid-template-columns: repeat(2, 352px);
   }
 }
@@ -829,6 +854,12 @@ svg {
   }
   .projects__button{
     font-size: var(--normal-font-size);
+  }
+
+  .cert__container{
+    grid-template-columns: repeat(3, 350px);
+    row-gap: 3rem;
+    padding-block: 1.5rem 2rem;
   }
 
   .contact__container{

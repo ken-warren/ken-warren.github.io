@@ -310,6 +310,10 @@ svg {
   transition: transform .4s;
 }
 
+.home__social-link:hover{
+  transform: translateY(-.25rem);
+}
+
 .home__image{
   justify-self: center;
 }
@@ -426,7 +430,6 @@ svg {
   background-color: var(--container-color);
   padding: 3rem 1.25rem;
   border-radius: 1rem;
-  border: 2px solid var(--first-color-alt);
   transition: border .4s;
 }
 
@@ -440,6 +443,10 @@ svg {
 .services__title{
   font-size:var(--h2-font-size);
   margin-bottom: 1.5rem;
+}
+
+.services__card:hover{
+  border: 2px solid var(--first-color);
 }
 
 /*=============== PROJECTS ===============*/
@@ -471,7 +478,7 @@ svg {
   width: 100%;
   height: 100%;
   background: linear-gradient(180deg,
-              hsla(0, 0%, 0%, 0) 0%
+              hsla(0, 0%, 0%, 0) 0%,
               hsla(var(--hue), 70%, 40%, .8) 120%);
   backdrop-filter: blur(4px);
   border-radius: 1rem;
@@ -599,7 +606,7 @@ svg {
 }
 
 .footer__title span{
-  columns: var(--first-color);
+  color: var(--first-color);
 }
 
 .footer__education{
@@ -614,20 +621,19 @@ svg {
 
 .footer__social-link{
   display: flex;
-  background-color: var(--first-color-alt);
-  padding: 0.5rem;
+  padding: .5rem;
   color: var(--title-color);
-  font-size: 3rem;
-  clip-path: circle(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 25%);
+  font-size: 1.5rem;
+  clip-path: circle();
   transition: transform .4s;
 }
 
-.footer__social-link:hover{
+.footer__social:hover{
   transform: translateY(-.25rem);
 }
 
 .footer__copy{
-  font-size: var(--small-font-size);
+  font-size: var(--smaller-font-size);
   margin-top: 2rem;
 }
 

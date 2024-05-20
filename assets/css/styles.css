@@ -387,7 +387,7 @@ svg {
   text-align: center;
 }
 
-.skills__description{
+.skills__decription{
   margin-bottom: 2rem;
 }
 
@@ -424,15 +424,17 @@ svg {
 .services__card{
   text-align: center;
   background-color: var(--container-color);
-  border-radius: 3rem 1.25rem;
+  padding: 3rem 1.25rem;
+  border-radius: 1rem;
   border: 2px solid var(--first-color-alt);
   transition: border .4s;
 }
 
 .services__icon{
   display: block;
+  font-size: 4rem;
   color: var(--first-color);
-  margin-bottom: .5rem;
+  margin-bottom: .75rem;
 }
 
 .services__title{

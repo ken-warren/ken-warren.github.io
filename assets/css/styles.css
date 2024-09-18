@@ -863,7 +863,7 @@ svg {
   }
 
   .cert__container{
-    grid-template-columns: repeat(3, 350px);
+    grid-template-columns: repeat(2, 350px);
     row-gap: 3rem;
     padding-block: 1.5rem 2rem;
   }

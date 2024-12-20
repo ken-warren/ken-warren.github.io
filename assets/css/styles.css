@@ -259,8 +259,8 @@ svg {
 .nav__light,
 .nav__dark{
   position: fixed;
-  top: .7rem;
-  right: 4rem;
+  top: 1.2rem;
+  right: 2rem;
 }
 
 .nav__light{
@@ -761,6 +761,18 @@ svg {
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px){
+  .nav__light,
+  .nav__dark{
+    position: fixed;
+    top: .9rem;
+    right: 3rem; 
+  }
+
+  .nav__light i,
+  .nav__dark i{
+    font-size: 1.4rem;
+  }
+  
   .container{
     margin-inline: 1rem;
   }
@@ -775,8 +787,30 @@ svg {
   }
 }
 
+
+@media screen and (max-width: 499px){
+  .nav__light,
+  .nav__dark{
+    position: fixed;
+    top: 0.95rem;
+    right: 3.5rem; 
+  }
+
+  .nav__light i,
+  .nav__dark i{
+    font-size: 1.4rem;
+  }
+}
+
 /* For medium devices */
 @media screen and (min-width: 576px){
+  .nav__light,
+  .nav__dark{
+    position: fixed;
+    top: .7rem;
+    right: 3.5rem;
+  }
+
   .home__container,
   .about__container,
   .skills__container,
@@ -794,6 +828,13 @@ svg {
 @media screen and (min-width: 768px){
   .nav__menu{
     width: 55%;
+  }
+
+  .nav__light,
+  .nav__dark{
+    position: fixed;
+    top: .8rem;
+    right: 3.5rem;
   }
 
   .home__container,
@@ -850,6 +891,14 @@ svg {
   .nav__toggle{
     display: none;
   }
+
+  .nav__light,
+  .nav__dark{
+    position: fixed;
+    top: 1.2rem;
+    right: 4rem;
+  }
+  
   .nav__list{
     flex-direction: row;
     column-gap: 3rem;

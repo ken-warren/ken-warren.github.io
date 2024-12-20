@@ -121,3 +121,21 @@ const typed = new Typed('.multiple__text', {
     backDelay: 1000,
     loop:true
 });
+
+const navDark = document.getElementById('nav-dark');
+const navLight = document.getElementById('nav-light');
+
+// Function to toggle dark/light theme
+navDark.addEventListener('click', () => {
+  document.body.classList.add('dark-theme');
+  document.body.classList.remove('light-theme');
+  navDark.style.display = 'none'; // Hide dark mode icon
+  navLight.style.display = 'block'; // Show light mode icon
+});
+
+navLight.addEventListener('click', () => {
+  document.body.classList.add('light-theme');
+  document.body.classList.remove('dark-theme');
+  navLight.style.display = 'none'; // Hide light mode icon
+  navDark.style.display = 'block'; // Show dark mode icon
+});

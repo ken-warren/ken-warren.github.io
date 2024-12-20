@@ -27,26 +27,25 @@
   --body-color: hsl(228, 15%, 20%);
   --container-color: hsl(228, 15%, 15%);
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Poppins", sans-serif;
-  --biggest-font-size: 2rem;
-  --bigger-font-size: 1.25rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+ /*========== Font and typography ==========*/
+ --body-font: -apple-system, BlinkMacSystemFont, "San Francisco", "Poppins", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+ --biggest-font-size: 2rem;
+ --bigger-font-size: 1.25rem;
+ --h1-font-size: 1.5rem;
+ --h2-font-size: 1.25rem;
+ --h3-font-size: 1rem;
+ --normal-font-size: .938rem;
+ --small-font-size: .813rem;
+ --smaller-font-size: .75rem;
 
-  /*========== Font weight ==========*/
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-semi-bold: 600;
+ /*========== Font weight ==========*/
+ --font-regular: 400;
+ --font-medium: 500;
+ --font-semi-bold: 600;
 
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
+ /*========== z index ==========*/
+ --z-tooltip: 10;
+ --z-fixed: 100;
 }
 
 /*========== Responsive typography ==========*/
@@ -316,6 +315,19 @@ svg {
 
 .home__image{
   justify-self: center;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-2.4rem);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }
 
 .home__blob{

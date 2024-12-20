@@ -112,3 +112,12 @@ const scrollActive = () =>{
     })
 }
 window.addEventListener('scroll', scrollActive)
+
+/*================ scroll reveal =========== */
+const typed = new Typed('.multiple__text', {
+    strings: ['Statistician', 'Data Analyst', 'Quantitative Researcher'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop:true
+});

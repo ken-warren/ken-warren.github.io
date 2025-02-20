@@ -362,6 +362,7 @@ svg {
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
   margin-block: 0.5rem 1rem;
+  letter-spacing: 2px;
 }
 
 .home__social {

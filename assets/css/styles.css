@@ -298,6 +298,8 @@ svg {
 /* Show menu */
 .show-menu {
   right: 0;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 /* Add blur to header */
@@ -308,7 +310,7 @@ svg {
 .blur-header::after {
   content: "";
   position: absolute;
-  width: 1000%;
+  width: 100%;
   height: 100%;
   background-color: hsla(0, 0%, 10%, 0.3);
   backdrop-filter: blur(24px);
@@ -799,7 +801,7 @@ svg {
 
   .nav__light i,
   .nav__dark i {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
   }
 
   .container {
@@ -826,7 +828,7 @@ svg {
 
   .nav__light i,
   .nav__dark i {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -850,7 +852,7 @@ svg {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .nav__menu {
     width: 55%;
   }

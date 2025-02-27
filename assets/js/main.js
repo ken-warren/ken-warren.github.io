@@ -93,7 +93,7 @@ const scrollup = () =>{
 window.addEventListener('scroll', scrollup)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.getElementById('section[id]')
+const sections = document.querySelectorAll('section[id]')
 
 const scrollActive = () =>{
     const scrollY = window.pageYOffset

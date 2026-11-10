@@ -104,6 +104,42 @@
   });
   $$('.reveal, .reveal-text, .service').forEach((el) => io.observe(el));
 
+
+  /* ---------- experience tree ---------- */
+  const tree = $('#tree');
+  if (tree) {
+    const fill = $('#tree-fill');
+    const branches = $$('.branch', tree);
+    const trunk = $('.tree__trunk', tree);
+    branches.forEach((b) => io.observe(b));
+
+    const growTree = () => {
+      const tr = trunk.getBoundingClientRect();
+      const reach = innerHeight * 0.62 - tr.top; // the trunk "grows" to 62% down the viewport
+      const p = Math.min(Math.max(reach / tr.height, 0), 1);
+      fill.style.transform = `scaleY(${reduceMotion ? 1 : p})`;
+      const tip = tr.top + tr.height * (reduceMotion ? 1 : p);
+      branches.forEach((b) => {
+        const node = $('.branch__node', b).getBoundingClientRect();
+        b.classList.toggle('is-lit', node.top + node.height / 2 <= tip + 2);
+      });
+    };
+    addEventListener('scroll', growTree, { passive: true });
+    addEventListener('resize', growTree);
+    growTree();
+
+    $$('.leaf__toggle', tree).forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const leaf = btn.closest('.leaf');
+        const open = !leaf.classList.contains('is-open');
+        leaf.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', String(open));
+        // trunk length changes as panels open/close; keep the fill in step
+        setTimeout(growTree, 600);
+      });
+    });
+  }
+
   /* ---------- custom cursor ---------- */
   if (finePointer && !reduceMotion) {
     const cursor = $('.cursor');
@@ -121,7 +157,7 @@
     };
     loop();
     document.addEventListener('mouseover', (e) => {
-      cursor.classList.toggle('is-hover', !!e.target.closest('a, button, input, textarea, label'));
+      cursor.classList.toggle('is-hover', !!e.target.closest('a, button:not(.cert--static), input, textarea, label'));
     });
   }
 
@@ -202,7 +238,7 @@
   }
 
   /* ---------- certificate hover peek + viewer ---------- */
-  $$('.cert').forEach((c) => {
+  $$('.cert[data-src]').forEach((c) => {
     const peek = $('.cert__peek', c);
     c.addEventListener('mousemove', (e) => {
       const r = c.getBoundingClientRect();
@@ -218,7 +254,7 @@
     viewer.classList.remove('is-open');
     setTimeout(() => viewer.close(), reduceMotion ? 0 : 300);
   };
-  $$('.cert').forEach((c) => c.addEventListener('click', () => {
+  $$('.cert[data-src]').forEach((c) => c.addEventListener('click', () => {
     vImg.src = c.dataset.src;
     vImg.alt = `Certificate: ${c.dataset.title}`;
     vCap.textContent = c.dataset.title;
